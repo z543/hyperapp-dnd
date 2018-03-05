@@ -8,9 +8,9 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "dragula": "3.7.2",
-    "hyperapp": "1.1.2",
-    "sortablejs": "1.7.0"
+    "dragula": "^3.7.2",
+    "hyperapp": "^1.1.2",
+    "sortablejs": "^1.7.0"
   },
   "devDependencies": {
     "parcel-bundler": "^1.6.1"
