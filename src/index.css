@@ -4,12 +4,12 @@
 
 .card {
   /* user-select: none !important; */
-  cursor: pointer;
+  /* cursor: pointer; */
   color: #3c763d;
   border-radius: 2px;
   border-color: #d6e9c6;
-  padding: 8px;
-  margin: 8px;
+  padding: 8px 8px;
+  margin: 8px 5px;
 }
 
 .card1 {
@@ -18,25 +18,44 @@
 
 .card2 {
   background-color: yellowgreen;
+  cursor: move;
 }
 
 .drag_region {
   /* background-color: lightgray; */
   border-width: 1px;
   padding: 2px;
-  margin: 8px;
+  margin: 12px;
   border-radius: 3px;
   border-color: lightgray;
   border-style: solid;
 }
 
-textarea {
+/* textarea {
   font-family: monospace;
   width: 100%;
   height: 500px;
+} */
+
+div > pre {
+  background-color: lightgoldenrodyellow;
 }
 
 div.error {
   color: red;
   margin: 8px;
+}
+
+.sortable-ghost {
+  opacity: .3;
+}
+
+.drag-handle {
+  cursor: move;
+  margin: 0px 5px 0px 0px;
+  padding: 5px 5px;
+  border-width: 1px;
+  border-color: lightgray;
+  border-radius: 3px;
+  border-style: solid;
 }
