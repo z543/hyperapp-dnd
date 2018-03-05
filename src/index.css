@@ -1,0 +1,42 @@
+.gu-mirror {
+  filter: alpha(opacity=80);
+}
+
+.card {
+  /* user-select: none !important; */
+  cursor: pointer;
+  color: #3c763d;
+  border-radius: 2px;
+  border-color: #d6e9c6;
+  padding: 8px;
+  margin: 8px;
+}
+
+.card1 {
+  background-color: #dff0d8;
+}
+
+.card2 {
+  background-color: yellowgreen;
+}
+
+.drag_region {
+  /* background-color: lightgray; */
+  border-width: 1px;
+  padding: 2px;
+  margin: 8px;
+  border-radius: 3px;
+  border-color: lightgray;
+  border-style: solid;
+}
+
+textarea {
+  font-family: monospace;
+  width: 100%;
+  height: 500px;
+}
+
+div.error {
+  color: red;
+  margin: 8px;
+}
