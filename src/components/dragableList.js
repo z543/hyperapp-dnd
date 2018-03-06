@@ -7,8 +7,8 @@ const DragableList = (props, children) => {
     <div
       class={props.class}
       data-module={props.module}
-      oncreate={sortable.createHandler}
-      ondestroy={sortable.destroyHandler}
+      oncreate={sortable.init}
+      ondestroy={sortable.deinit}
     >
       {children}
     </div>

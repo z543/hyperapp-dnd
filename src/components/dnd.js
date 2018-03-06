@@ -37,20 +37,19 @@ function createSortable({ sortableOptions = {}, moveItemByIndex, group }) {
           // let list = this.el
           // _activeComponent = this
         } else if (funName === 'onAdd' || funName === 'onUpdate') {
-          
         } else if (funName === 'onEnd') {
           // setTimeout to prevert flicker
           setTimeout(function() {
             evt.from.insertBefore(evt.item, _nextSibling)
-            moveItemByIndex({
-              source_module: evt.from.dataset.module,
-              oldIndex: evt.oldIndex,
-              target_module: evt.to.dataset.module,
-              newIndex: evt.newIndex,
-            })
           }, 0)
+          
+          moveItemByIndex({
+            source_module: evt.from.dataset.module,
+            oldIndex: evt.oldIndex,
+            target_module: evt.to.dataset.module,
+            newIndex: evt.newIndex,
+          })
         }
-
         // if (evt.type === 'move') {
         //   const canMove = eventHandler ? eventHandler(arguments) : true
         //   return canMove
@@ -65,10 +64,10 @@ function createSortable({ sortableOptions = {}, moveItemByIndex, group }) {
   let _sortableOptions = createInternalSortableOptions(sortableOptions)
   let _sortableInstance = null
   return {
-    createHandler(el) {
+    init(el) {
       _sortableInstance = Sortable.create(el, _sortableOptions)
     },
-    destroyHandler() {
+    deinit() {
       _sortableInstance && _sortableInstance.destroy()
       _sortableInstance = null
     },
