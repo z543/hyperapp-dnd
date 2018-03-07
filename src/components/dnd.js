@@ -13,9 +13,6 @@ function createSortable({ sortableOptions = {}, moveItemByIndex, group }) {
     //let result = { ..._defaultSortableOptions, ...sortableOptions }
     let group_object = group ? { group } : {}
     let result = Object.assign({}, _defaultSortableOptions, sortableOptions, group_object)
-    //let keys = Object.keys(result)
-    //keys.forEach(key => {
-    //;['onStart', 'onAdd', 'onUpdate', 'onEnd']
     ;[
       'onChoose',
       'onStart',
@@ -34,8 +31,6 @@ function createSortable({ sortableOptions = {}, moveItemByIndex, group }) {
         console.log(funName, evt)
         if (funName === 'onStart') {
           _nextSibling = evt.item.nextElementSibling
-          // let list = this.el
-          // _activeComponent = this
         } else if (funName === 'onAdd' || funName === 'onUpdate') {
         } else if (funName === 'onEnd') {
           // setTimeout to prevert flicker
