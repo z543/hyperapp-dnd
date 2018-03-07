@@ -2,3 +2,4 @@
 /dist
 /.cache
 /yarn.lock
+/dnd.code-workspace
